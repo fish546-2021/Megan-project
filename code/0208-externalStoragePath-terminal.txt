@@ -1,0 +1,24 @@
+Last login: Mon Feb  8 18:10:48 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+(base) Megans-MacBook-Pro-3:~ meganewing$ pwd
+/Users/meganewing
+(base) Megans-MacBook-Pro-3:~ meganewing$ cd ../
+(base) Megans-MacBook-Pro-3:Users meganewing$ cd ../
+(base) Megans-MacBook-Pro-3:/ meganewing$ pwd
+/
+(base) Megans-MacBook-Pro-3:/ meganewing$ cd /Volumes
+(base) Megans-MacBook-Pro-3:Volumes meganewing$ ls
+BOOTCAMP	Macintosh HD	RStudio-1.3.959	Recovery	Samsung USB
+(base) Megans-MacBook-Pro-3:Volumes meganewing$ cd Samsung USB
+-bash: cd: Samsung: No such file or directory
+(base) Megans-MacBook-Pro-3:Volumes meganewing$ cd Samsung\ USB/
+(base) Megans-MacBook-Pro-3:Samsung USB meganewing$ 
+
+
+
+
+
+
