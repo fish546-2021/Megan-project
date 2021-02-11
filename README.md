@@ -6,6 +6,8 @@ Class project for FISH 546 winter 2021
 - RStudio Version 1.3.959
 - kallisto 0.46.2
 - FastQC v0.11.9 (Win/Linux)
+- GitHub Desktop Version 2.5.4
+- JupyterLab 3.0.6
 
 ### RNA seq data: coho salmon treated with a steroid and looked at gonadal transcriptional alterations
  Data courtesy of Chris Monson (UW) and Giles Goetz (NOAA)
