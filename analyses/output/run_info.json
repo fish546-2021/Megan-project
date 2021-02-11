@@ -1,0 +1,13 @@
+{
+	"n_targets": 7575,
+	"n_bootstraps": 0,
+	"n_processed": 29873562,
+	"n_pseudoaligned": 1441286,
+	"n_unique": 937504,
+	"p_pseudoaligned": 4.8,
+	"p_unique": 3.1,
+	"kallisto_version": "0.46.2",
+	"index_version": 10,
+	"start_time": "Wed Feb 10 22:02:48 2021",
+	"call": "kallisto quant -i 0210-kallisto.idx -o output -b 100 /Volumes/Samsung USB/salmon/Files_Giles_Uploaded_For_Chris/17104-02RT-01-13_S21_L003_R1_001.fastq.gz /Volumes/Samsung USB/salmon/Files_Giles_Uploaded_For_Chris/17104-02RT-01-13_S21_L003_R2_001.fastq.gz"
+}
