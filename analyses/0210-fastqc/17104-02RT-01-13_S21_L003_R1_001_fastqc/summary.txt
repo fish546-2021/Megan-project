@@ -1,0 +1,11 @@
+PASS	Basic Statistics	17104-02RT-01-13_S21_L003_R1_001.fastq.gz
+PASS	Per base sequence quality	17104-02RT-01-13_S21_L003_R1_001.fastq.gz
+PASS	Per tile sequence quality	17104-02RT-01-13_S21_L003_R1_001.fastq.gz
+PASS	Per sequence quality scores	17104-02RT-01-13_S21_L003_R1_001.fastq.gz
+FAIL	Per base sequence content	17104-02RT-01-13_S21_L003_R1_001.fastq.gz
+PASS	Per sequence GC content	17104-02RT-01-13_S21_L003_R1_001.fastq.gz
+PASS	Per base N content	17104-02RT-01-13_S21_L003_R1_001.fastq.gz
+PASS	Sequence Length Distribution	17104-02RT-01-13_S21_L003_R1_001.fastq.gz
+FAIL	Sequence Duplication Levels	17104-02RT-01-13_S21_L003_R1_001.fastq.gz
+WARN	Overrepresented sequences	17104-02RT-01-13_S21_L003_R1_001.fastq.gz
+WARN	Adapter Content	17104-02RT-01-13_S21_L003_R1_001.fastq.gz
