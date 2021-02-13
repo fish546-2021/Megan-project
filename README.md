@@ -61,7 +61,7 @@ As of February 11th, 2021, Week 5
   - There was no output because it was unsuccessful :(
 
 
-##### 6. Untrimmed files were quantified using Kallisto in the file `/code/0210-kallisto.ipynb`
+##### 6. Untrimmed files were quantified using Kallisto in the file `/code/0210-kallisto.ipynb` in order to pseudoalign the sequences (as opposed to short sequencing reads with something like Bowtie)
   -  `/analyses/0210-kallisto.idx` Is the index used to run kallisto
 
   - `/analyses/output/` is the subdirectory containing kallisto results and contains the following
