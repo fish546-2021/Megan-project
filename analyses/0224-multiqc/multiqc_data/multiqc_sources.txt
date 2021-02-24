@@ -1,0 +1,5 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	17104-02RT-01-13_S21_L002_R2_001	/Volumes/Samsung USB/Megan-project/analyses/0224-multiqc/17104-02RT-01-13_S21_L002_R2_001_fastqc.zip
+FastQC	all_sections	17104-02RT-01-13_S21_L003_R1_001	/Volumes/Samsung USB/Megan-project/analyses/0224-multiqc/17104-02RT-01-13_S21_L003_R1_001_fastqc.zip
+FastQC	all_sections	17104-02RT-01-13_S21_L003_R2_001	/Volumes/Samsung USB/Megan-project/analyses/0224-multiqc/17104-02RT-01-13_S21_L003_R2_001_fastqc.zip
+FastQC	all_sections	17104-02RT-01-14_S22_L002_R1_001	/Volumes/Samsung USB/Megan-project/analyses/0224-multiqc/17104-02RT-01-14_S22_L002_R1_001_fastqc.zip

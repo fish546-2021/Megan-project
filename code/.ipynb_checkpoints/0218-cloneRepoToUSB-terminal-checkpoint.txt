@@ -1,0 +1,23 @@
+Last login: Thu Feb 11 11:00:13 on ttys002
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+(base) Megans-MacBook-Pro-3:~ meganewing$ cd /Volumes/Samsung\ USB/salmon/
+(base) Megans-MacBook-Pro-3:salmon meganewing$ cd ../
+(base) Megans-MacBook-Pro-3:Samsung USB meganewing$ git clone https://github.com/fish546-2021/Megan-project.git
+Cloning into 'Megan-project'...
+remote: Enumerating objects: 163, done.
+remote: Counting objects: 100% (163/163), done.
+remote: Compressing objects: 100% (125/125), done.
+remote: Total 163 (delta 52), reused 128 (delta 29), pack-reused 0
+Receiving objects: 100% (163/163), 61.55 MiB | 2.01 MiB/s, done.
+Resolving deltas: 100% (52/52), done.
+Updating files: 100% (81/81), done.
+(base) Megans-MacBook-Pro-3:Samsung USB meganewing$ 
+
+
+
+
+
+
