@@ -20,4 +20,4 @@
 
 source /gscratch/srlab/programs/scripts/paths.sh
 
-md5sum -c /gscratch/srlab/mewing0/
+md5sum -c /gscratch/srlab/mewing0/checksums.md5
