@@ -1,0 +1,4 @@
+control	control_rep1	../data/raw/17104-02RT-01-7_S15_L003_R1_001.fastq.gz	../data/raw/17104-02RT-01-7_S15_L003_R2_001.fastq.gz
+control	control_rep2	../data/raw/17104-02RT-01-8_S16_L002_R1_001.fastq.gz	../data/raw/17104-02RT-01-8_S16_L002_R2_001.fastq.gz
+E2	E2_rep1	../data/raw/17104-02RT-01-10_S18_L002_R1_001.fastq.gz	../data/raw/17104-02RT-01-10_S18_L002_R2_001.fastq.gz
+E2	E2_rep1	../data/raw/17104-02RT-01-11_S19_L002_R1_001.fastq.gz	../data/raw/17104-02RT-01-11_S19_L002_R2_001.fastq.gz

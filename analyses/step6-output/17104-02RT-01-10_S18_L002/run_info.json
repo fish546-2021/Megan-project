@@ -1,0 +1,13 @@
+{
+	"n_targets": 7575,
+	"n_bootstraps": 0,
+	"n_processed": 38354483,
+	"n_pseudoaligned": 1846504,
+	"n_unique": 1202127,
+	"p_pseudoaligned": 4.8,
+	"p_unique": 3.1,
+	"kallisto_version": "0.46.2",
+	"index_version": 10,
+	"start_time": "Thu Mar  4 11:51:51 2021",
+	"call": "kallisto quant -i step6-kallisto.idx -t 4 -o step6-output/17104-02RT-01-10_S18_L002/ ../data/raw/17104-02RT-01-10_S18_L002_R1_001.fastq.gz ../data/raw/17104-02RT-01-10_S18_L002_R2_001.fastq.gz"
+}
