@@ -19,12 +19,14 @@ library(DESeq2)
 
 ```{r}
 #load in count data, you will need to change the read line to the absolute path
+setwd("/Volumes/Samsung USB/Megan-project/")
 options(scipen = 999)
 data <- read.delim("./analyses/kallisto.isoform.counts.matrix")
-rownames(data) <- data$Feature
+rownames(data) <- data$X
 data <- data[,-1]
 #ensures all data as integer
 data <- round(data, digits = 0)
+head(data)
 ```
 
 
@@ -48,14 +50,16 @@ head(deseq2.res)
 ```
 ```{r}
 #Count number of hits with adjusted p-value less then 0.05
-dim(deseq2.res[!is.na(deseq2.res$padj) & deseq2.res$padj <= 0.05, ])
+DEG <- deseq2.res[!is.na(deseq2.res$padj) & deseq2.res$padj <= 0.05, ]
 
 tmp <- deseq2.res
+
+write.table(DEG,"/Volumes/Samsung USB/Megan-project/analyses/0309-DEG.tab", row.names = T)
 ```
 
 ```{r volcano}
 # The main plot
-plot(tmp$baseMean, tmp$log2FoldChange, pch=20, cex=0.45, ylim=c(-3, 3), log="x", col="darkgray",
+plot(tmp$baseMean, tmp$log2FoldChange, pch=20, cex=0.45, ylim=c(-10, 10), log="x", col="darkgray",
      main="DEG Estradiol versus Control  (pval <= 0.05)",
      xlab="mean of normalized counts",
      ylab="Log2 Fold Change")
@@ -79,21 +83,26 @@ topVarGenes <- head( order( rowVars( assay(rld) ), decreasing=TRUE ), 25)
 ```
 
 ```{r}
-#make a subset of the log transformed counts for just the top 25 varying genes
+#make heatmap of top 25 differentially expressed genes
 top25Counts<-assay(rld)[topVarGenes,]
-#Use pheatmap function to draw a heatmap
-#INCLUDE NEXT LINE IF YOU WANT TO SAVE THE FIGURE IN A FILE
-#pdf(file="gene.heatmap.pdf")
-pheatmap(top25Counts,scale = "row")
-#INCLUDE NEXT LINE IF YOU WANT TO SAVE THE FIGURE IN A FILE
-#dev.off()
+pheatmap(top25Counts,scale = "row",show_rownames = TRUE, treeheight_col = 1, fontsize_col = 12, fontsize_row = 5)
 ```
+
+
 ```{r}
-#PLOT PCA
-#INCLUDE NEXT LINE IF YOU WANT TO SAVE THE FIGURE IN A FILE
-#pdf(file="pca.pdf")
-print(plotPCA(rld, intgroup=c("Estradiol")))
-#INCLUDE NEXT LINE IF YOU WANT TO SAVE THE FIGURE IN A FILE
-#dev.off()
+# set working directory to where you have this repo saved 
+setwd("/Volumes/Samsung USB/Megan-project/")
+# make a heatmap using only our significant DEGs
+#import data
+DEGCounts <- read.table("analyses/0309-DEGCounts.tab", header=TRUE, quote="\"")
+#select subset of just gene and sample columns
+DEGHeatmap <- DEGCounts[-c(2:7)]
+#establish that the first column is row names 
+rownames(DEGHeatmap) <- DEGHeatmap$gene
+#get rid of the redundant row names column that will be created.
+DEGHeatmap <- DEGHeatmap[,-1]
+#make heatmap
+pheatmap(DEGHeatmap, scale = "row",show_rownames = TRUE, treeheight_col = 1, fontsize_col = 12, fontsize_row = 5)
 ```
+
 

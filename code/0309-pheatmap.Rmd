@@ -1,0 +1,54 @@
+---
+title: "0309-pheatmap"
+output: html_document
+---
+
+```{r }
+install.packages(pheatmap)
+ 
+# load package
+library(tidyverse)
+library(pheatmap)
+library(RColorBrewer)
+library(data.table)
+library("DESeq2")
+```
+
+
+```{r }
+
+setwd("/Volumes/Samsung USB/Megan-project/")
+# load data and subset
+data <- read.delim("./analyses/kallisto.isoform.counts.matrix")
+head(data)
+```
+
+```{r }
+heatmapPurpleOrange <- RColorBrewer::brewer.pal(11, "PuOr")
+```
+
+
+
+```{r}
+rownames(data) <- data$X
+data.heatmap <- data[,-1]
+head(data.heatmap)
+```
+```{r}
+colnames(data.heatmap) <- c("control1", "control2", "estradiol1", "estradiol2")
+head(data.heatmap)
+```
+
+```{r}
+noz_data.heatmap <- data.heatmap[rowSums(ovtemp.heatmap[, -1] >0) !=0, ]
+head(noz_data.heatmap)
+```
+
+
+```{r}
+pheatmap(noz_data.heatmap, cluster_rows=T, show_rownames=T, cluster_columns=T, na.rm=TRUE, scale="row", main = "Gene Counts by Treatment", color=rev(c("dodgerblue3", "goldenrod1")), fontsize = 7)
+```
+```{r}
+
+```
+
