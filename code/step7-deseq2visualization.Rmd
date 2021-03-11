@@ -102,7 +102,7 @@ rownames(DEGHeatmap) <- DEGHeatmap$gene
 #get rid of the redundant row names column that will be created.
 DEGHeatmap <- DEGHeatmap[,-1]
 #make heatmap
-pheatmap(DEGHeatmap, scale = "row",show_rownames = TRUE, treeheight_col = 1, fontsize_col = 12, fontsize_row = 5)
+pheatmap(DEGHeatmap, scale = "row",show_rownames = TRUE, treeheight_col = 1, fontsize_col = 10, fontsize_row = 10)
 ```
 
 

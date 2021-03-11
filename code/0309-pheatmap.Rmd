@@ -40,7 +40,7 @@ head(data.heatmap)
 ```
 
 ```{r}
-noz_data.heatmap <- data.heatmap[rowSums(ovtemp.heatmap[, -1] >0) !=0, ]
+noz_data.heatmap <- data.heatmap[rowSums(data.heatmap[, -1] >0) !=0, ]
 head(noz_data.heatmap)
 ```
 
