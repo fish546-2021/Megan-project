@@ -46,9 +46,8 @@ head(noz_data.heatmap)
 
 
 ```{r}
-pheatmap(noz_data.heatmap, cluster_rows=T, show_rownames=T, cluster_columns=T, na.rm=TRUE, scale="row", main = "Gene Counts by Treatment", color=rev(c("dodgerblue3", "goldenrod1")), fontsize = 7)
-```
-```{r}
+data_noz <- data[rowSums(data[, -1] >0) !=0, ]
+view(data_noz)
 
 ```
 

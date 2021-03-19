@@ -1,9 +1,9 @@
 ---
-title: "0308-deseq2"
+title: "step7-deseq2"
 output: html_document
 ---
 ```{r}
-#set working directory to the project for wherever it is stored on your computer
+#set working directory to the project for wherever it is stored on your computer, you will need to do this multiple chunks.
 setwd("/Volumes/Samsung USB/Megan-project/")
 ```
 
@@ -31,6 +31,7 @@ head(data)
 
 
 ```{r}
+setwd("/Volumes/Samsung USB/Megan-project/")
 #build objects; specify which columns are in groups
 deseq2.colData <- data.frame(condition=factor(c(rep("Control", 2), rep("Estradiol", 2))), 
                              type=factor(rep("single-read", 4)))
@@ -54,7 +55,7 @@ DEG <- deseq2.res[!is.na(deseq2.res$padj) & deseq2.res$padj <= 0.05, ]
 
 tmp <- deseq2.res
 
-write.table(DEG,"/Volumes/Samsung USB/Megan-project/analyses/0309-DEG.tab", row.names = T)
+write.table(DEG,"analyses/0309-DEG.tab", row.names = T)
 ```
 
 ```{r volcano}
